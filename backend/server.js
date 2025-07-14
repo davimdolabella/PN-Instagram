@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const UsersModel = require('./models/UsersModel.js')
 const cors = require('./middlewares/cors.js')
 app.use(express.json())
-app.use(cors('http://127.0.0.1:5500'))
+app.use(cors('https://davimdolabella.github.io'))
 const ConnectDB = async ()=>{
     const mongo_uri = process.env.MONGO_URI
     try {
