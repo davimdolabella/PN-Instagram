@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Users Manager - Gerenciar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>📱 Instagram Manager</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Adicionar</a>
+                <a href="gerenciar.html" class="nav-link active">Gerenciar</a>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h2>Gerenciar Usuários</h2>
+                <p>Visualize e busque usuários cadastrados</p>
+            </div>
+
+            <div class="controls-container">
+                <div class="search-container">
+                    <div class="search-group">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="Buscar por username..." 
+                            class="search-input"
+                        >
+                        <button type="button" class="btn btn-secondary" id="searchBtn">
+                            <span class="btn-text">🔍 Buscar</span>
+                            <span class="btn-loading" style="display: none;">
+                                <span class="spinner"></span>
+                                Buscando...
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="actions-container">
+                    <button type="button" class="btn btn-primary" id="loadAllBtn">
+                        <span class="btn-text">📋 Carregar Todos</span>
+                        <span class="btn-loading" style="display: none;">
+                            <span class="spinner"></span>
+                            Carregando...
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-outline" id="clearBtn">
+                        🗑️ Limpar
+                    </button>
+                </div>
+            </div>
+
+            <div class="results-container">
+                <div class="results-header" id="resultsHeader" style="display: none;">
+                    <h3 id="resultsTitle">Resultados</h3>
+                    <span class="results-count" id="resultsCount">0 usuários encontrados</span>
+                </div>
+
+                <div class="users-grid" id="usersGrid">
+                    <!-- Usuários serão carregados aqui -->
+                </div>
+
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-icon">📋</div>
+                    <h3>Nenhum usuário encontrado</h3>
+                    <p>Use os botões acima para buscar ou carregar todos os usuários</p>
+                </div>
+
+                <div class="loading-state" id="loadingState" style="display: none;">
+                    <div class="loading-spinner"></div>
+                    <p>Carregando usuários...</p>
+                </div>
+            </div>
+        </main>
+
+        <div class="notification" id="notification">
+            <div class="notification-content">
+                <span class="notification-icon"></span>
+                <span class="notification-message"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

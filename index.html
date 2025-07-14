@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Users Manager - Adicionar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>📱 Instagram Manager</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Adicionar</a>
+                <a href="gerenciar.html" class="nav-link">Gerenciar</a>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h2>Adicionar Novo Usuário</h2>
+                <p>Insira o username do Instagram para adicionar à lista</p>
+            </div>
+
+            <div class="form-container">
+                <form id="addUserForm" class="user-form">
+                    <div class="form-group">
+                        <label for="username">Username do Instagram</label>
+                        <div class="input-group">
+                            <span class="input-prefix"></span>
+                            <input 
+                                type="text" 
+                                id="username" 
+                                name="username" 
+                                placeholder="Digite o username" 
+                                required
+                                autocomplete="off"
+                            >
+                        </div>
+                        <small class="form-help">Digite apenas o username, sem @ ou URL</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <span class="btn-text">Adicionar Usuário</span>
+                        <span class="btn-loading" style="display: none;">
+                            <span class="spinner"></span>
+                            Adicionando...
+                        </span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="preview-container" id="previewContainer" style="display: none;">
+                <h3>Preview do Usuário</h3>
+                <div class="user-preview" id="userPreview">
+                    <div class="preview-info">
+                        <strong>Username:</strong> <span id="previewUsername"></span>
+                    </div>
+                    <div class="preview-info">
+                        <strong>Status:</strong> <span id="previewStatus" class="status-badge">Não enviado</span>
+                    </div>
+                    <div class="preview-info">
+                        <strong>Link:</strong> <a id="previewLink" href="#" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="notification" id="notification">
+            <div class="notification-content">
+                <span class="notification-icon"></span>
+                <span class="notification-message"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
